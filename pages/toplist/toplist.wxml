@@ -1,0 +1,11 @@
+<view style="background:#{{bgColor}}">
+  <view class="container">
+    <view class="item" data-idgg="{{index}}" bindtap="openPlaysong" wx:for="{{songlist}}" wx:key="dg">
+        <text class="num">{{index+1}}</text>
+        <view class="right">
+            <text class="title">{{item.data.songname}}</text>
+            <text class="info">{{item.data.albumname}}</text>
+        </view>
+    </view>
+  </view>
+</view>

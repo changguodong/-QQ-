@@ -1,0 +1,13 @@
+
+.container .item{
+  display: flex;
+  padding: 30rpx 0rpx;
+}
+.container .item .num{
+  color: #fff;
+  opacity: 0.7;
+}
+.container .item .right .title{
+  font-size: 36rpx;
+  color: #fff;
+}

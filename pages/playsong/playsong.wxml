@@ -1,0 +1,26 @@
+<view style="background:#333" class="body">
+    <view class="container">
+      <view class="header">
+        <image class="left" src="{{imgPath}}"></image>
+        <view class="content">
+            <text class="songname">歌名</text>
+            <text class="singer">歌手</text>
+        </view>
+        <image class="play-ctr" bindtap="playmusic" src="{{imgpath ? '/images/icon-play.png' : '/images/icon-pause.png'}}"></image>
+      </view>
+      <view class="rlc">
+        <scroll-view scroll-y style="height:800rpx;">
+          <text style="text-align:center;display:block">{{lyricText}}</text>
+         </scroll-view>
+      </view>
+      <view class="ctr">
+        <view class="start">{{currentScent}}:{{currentPosition % 60<10?'0':''}}{{currentPosition % 60}}</view>
+        <view class="bar-faze" bindtouchmove="barCtr" bindtouchend="barCtrEnd">
+          <view class="bar">
+            <view class="bar-child" style="width:{{width + '%'}}"></view>
+          </view>
+        </view>  
+        <view class="end">{{allFZ<10?'0':''}}{{allFZ}}:{{duration%60}}</view>
+      </view>
+    </view>
+</view>
